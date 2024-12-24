@@ -1,0 +1,11 @@
+ESTE ES UN REGISTRO DE ACTIVIDADES
+==================================
+Autor: Nikolai Garcia Chkourak
+Fecha: 12/12/2024
+
+Resultados:
+18:38 Creación de log.txt
+18:38 Creación de pares.py
+18:38 Creación de histograma.py
+18:38 Creación de modificacion de histograma.py
+18:38 Creación de res_estadistico.py

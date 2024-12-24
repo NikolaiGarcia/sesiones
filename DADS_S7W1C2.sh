@@ -24,7 +24,7 @@ conteo_caracteres textos/logs.txt
 touch scripts/pares.py
 echo "print('2, 4, 6, 8, 10')">scripts/pares.py
 write_log pares.py
-python3 scripts/pares.py
+python scripts/pares.py
 echo """import numpy as np 
 import pandas as pd 
 
@@ -59,7 +59,7 @@ for i in range(len(histograma)):
     sep = \"\" 
     )""">scripts/histograma.py
 write_log histograma.py
-python3 scripts/histograma.py
+python scripts/histograma.py
 echo """import numpy as np
 import pandas as pd
 import argparse
@@ -103,8 +103,8 @@ for i in range(len(histograma)):
              len(str(abs(histograma.index[i])))),
         '*'*round(100*histograma.iloc[i]/len(datos_trim)),
         sep=\"\"
-    )"""
-python3 scripts/histograma.py 200 5 2
+    )""">scripts/histograma.py
+python scripts/histograma.py 200 5 2
 write_log modificacion\ de\ histograma.py
 echo """import pandas as pd
 import argparse
@@ -138,6 +138,29 @@ resumen = pd.DataFrame({
     'IQR': round(iqr, 1)
 }, index=[''])
 
-print(resumen)"""
-python3 res_estadistico.py https://raw.githubusercontent.com/jsaraujott/datos/main/datos.csv
+print(resumen)""">scripts/res_estadistico.py
+python scripts/res_estadistico.py https://raw.githubusercontent.com/jsaraujott/datos/main/datos.csv
 write_log res_estadistico.py
+echo """import argparse
+
+parser = argparse.ArgumentParser()
+
+parser.add_argument('numero',type=int)
+
+args = parser.parse_args()
+
+if args.numero < 1:
+    print(f'El número {args.numero} no es valido por ser menor que 1')
+elif args.numero == 1 or args.numero == 2:
+    print(f'{args.numero} es primo')
+else:
+    primo = True
+    for i in range(2,args.numero):
+        if args.numero%i == 0:
+            primo = False
+            print(f'El número {args.numero} se puede escribir como {i}*{args.numero//i}. No es primo.')
+            break
+    if primo:
+        print(f'El número {args.numero} es primo.') #Este script es de orden O(n)""">scripts/es_primo.py
+python scripts/es_primo.py 31
+write_log es_primo.py

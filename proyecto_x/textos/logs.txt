@@ -4,8 +4,9 @@ Autor: Nikolai Garcia Chkourak
 Fecha: 12/12/2024
 
 Resultados:
-18:38 Creación de log.txt
-18:38 Creación de pares.py
-18:38 Creación de histograma.py
-18:38 Creación de modificacion de histograma.py
-18:38 Creación de res_estadistico.py
+19:27 Creación de log.txt
+19:27 Creación de pares.py
+19:27 Creación de histograma.py
+19:27 Creación de modificacion de histograma.py
+19:27 Creación de res_estadistico.py
+19:27 Creación de es_primo.py
